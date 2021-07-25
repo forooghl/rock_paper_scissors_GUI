@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 
-#show who win 
+#show who win
 def GameResult():
     global RChoice , HChoice , win , winLabel , point
 
@@ -37,20 +37,20 @@ def GameResult():
     paper.place(x = 210 , y = 400)
     scissors.place(x = 210 , y = 400)
 
-    #game over message 
+    #game over message
     if point < 0 :
         point = 0
         score.config(text = "Score : " + str(point))
         messagebox.showinfo("Loser" , "Game Over")
 
-    #add play again button 
+    #add play again button
     playagainButton = tkinter.Button(main , text = 'Play again' , command = Playagain)
     playagainButton.pack()
     playagainButton.place(x = 540 , y = 370)
     playagainButton['bg'] = '#F9F2BB'
 
 
-#play again function 
+#play again function
 def Playagain():
     global winLable
 
@@ -63,8 +63,8 @@ def Playagain():
     rockLH.place(x = 210 , y = 400)
     paperLH.place(x = 210 , y = 400)
     scissorsLH.place(x = 210 , y = 400)
-    
-    #destroy win lable 
+
+    #destroy win lable
     winLabel.destroy()
 
     #show buttons
@@ -101,7 +101,7 @@ def YourturnFun(choice):
         HChoice = "paper"
     elif choice == 'scissors':
         HChoice = "scissors"
-    
+
     #call winner function and check who win
     Winner()
 
@@ -120,7 +120,7 @@ def ScoreFun():
 def Winner():
     global win , HChoice , RChoice
 
-    #check who win 
+    #check who win
     if HChoice == 'rock' and RChoice == 'rock':
         win = "Equal"
     elif HChoice == 'paper' and RChoice == 'paper':
@@ -162,9 +162,9 @@ dice = random.randint(1 , 3)
 winLabel = Label()
 
 #Image of rock ...
-rockIcon = PhotoImage(file = r"D:\Work\Pythonexe\Project\Rock Paper Scissors\Icon\rock.png")
-paperIcon = PhotoImage(file = r"D:\Work\Pythonexe\Project\Rock Paper Scissors\Icon\paper.png")
-scissorsIcon = PhotoImage(file = r"D:\Work\Pythonexe\Project\Rock Paper Scissors\Icon\scissors.png")
+rockIcon = PhotoImage(file = r"rock.png")
+paperIcon = PhotoImage(file = r"paper.png")
+scissorsIcon = PhotoImage(file = r"scissors.png")
 
 #score lable
 score = Label(main , font = 'arial' , text = "Score : 0")
