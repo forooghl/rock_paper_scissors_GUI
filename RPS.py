@@ -162,9 +162,9 @@ dice = random.randint(1 , 3)
 winLabel = Label()
 
 #Image of rock ...
-rockIcon = PhotoImage(file = r"rock.png")
-paperIcon = PhotoImage(file = r"paper.png")
-scissorsIcon = PhotoImage(file = r"scissors.png")
+rockIcon = PhotoImage(file = "Icon\\rock.png")
+paperIcon = PhotoImage(file = "Icon\paper.png")
+scissorsIcon = PhotoImage(file = "Icon\scissors.png")
 
 #score lable
 score = Label(main , font = 'arial' , text = "Score : 0")
